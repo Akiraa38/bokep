@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Pembelajaran - Azmil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #ffffff;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    /* Halaman Home */
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      margin: 8px 0 20px 0;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin: 10px;
+      width: 230px;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    .header-img {
+      width: 220px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    /* Halaman Video & Foto */
+    .content-section {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 800px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      padding: 20px;
+      box-sizing: border-box;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .video-card, .image-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 15px;
+    }
+
+    .video-card video,
+    .image-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .back-btn {
+      background-color: #dc3545;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #b92d3a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Halaman Awal -->
+  <div id="home">
+    <img src="https://c.top4top.io/p_360299as90.jpg" alt="Header" class="header-img">
+    <h1>Selamat Datang di Website Bokep</h1>
+    <p>Pencet tombol di bawah untuk menonton video atau melihat foto Bokep.<br><b>By Developer: Azmil Bakhtiar</b></p>
+    <button class="btn" onclick="showSection('videos')">🎬 Tonton Video</button>
+    <button class="btn" onclick="showSection('photos')">🖼️ Lihat Foto</button>
+  </div>
+
+  <!-- Halaman Video -->
+  <div class="content-section" id="videos">
+    <h1>Daftar Video Pembelajaran</h1>
+
+    <div class="video-card"><video controls src="https://files.catbox.moe/u47e1q.mp4"></video></div>
+    <div class="video-card"><video controls src="https://files.catbox.moe/j87gkz.mp4"></video></div>
+    <div class="video-card"><video controls src="https://files.catbox.moe/b1zhjd.mp4"></video></div>
+    <div class="video-card"><video controls src="https://files.catbox.moe/unp49a.mp4"></video></div>
+    <div class="video-card"><video controls src="https://telegra.ph/file/5c62d66881100db561c9f.mp4"></video></div>
+    <div class="video-card"><video controls src="https://telegra.ph/file/0c8d173a9cb44fe54f3d3.mp4"></video></div>
+    <div class="video-card"><video controls src="https://telegra.ph/file/b58a5b8177521565c503b.mp4"></video></div>
+
+    <button class="back-btn" onclick="goHome()">⬅️ Kembali ke Home</button>
+    <footer>© 2025 Developer: <strong>Azmil</strong></footer>
+  </div>
+
+  <!-- Halaman Foto -->
+  <div class="content-section" id="photos">
+    <h1>Galeri Foto</h1>
+
+    <div class="image-card"><img src="https://telegra.ph/file/34d9348cd0b420eca47e5.jpg" alt="Foto 1"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/73c0fecd276c19560133e.jpg" alt="Foto 2"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/af029472c3fcf859fd281.jpg" alt="Foto 3"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/0e5be819fa70516f63766.jpg" alt="Foto 4"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/29146a2c1a9836c01f5a3.jpg" alt="Foto 5"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/85883c0024081ffb551b8.jpg" alt="Foto 6"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/d8b79ac5e98796efd9d7d.jpg" alt="Foto 7"></div>
+    <div class="image-card"><img src="https://telegra.ph/file/267744a1a8c897b1636b9.jpg" alt="Foto 8"></div>
+
+    <button class="back-btn" onclick="goHome()">⬅️ Kembali ke Home</button>
+    <footer>© 2025 Developer: <strong>Azmil</strong></footer>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.getElementById("home").style.display = "none";
+      document.getElementById(sectionId).style.display = "flex";
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+    }
+
+    function goHome() {
+      document.getElementById("home").style.display = "flex";
+      document.getElementById("videos").style.display = "none";
+      document.getElementById("photos").style.display = "none";
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100vh";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
